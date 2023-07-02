@@ -4,7 +4,7 @@ const dbConnect = () => {
   // connect DB
   mongoose
     .connect(
-      `mongodb+srv://Rishabh:f905V3WjcYlsLVpg@cluster0.cu8gn.mongodb.net/BOOK-STORE-APP?retryWrites=true&w=majority`,
+      `mongodb+srv://Rishabh:f905V3WjcYlsLVpg@cluster0.cu8gn.mongodb.net/MERN-STACK-PROJECT?retryWrites=true&w=majority`,
       {
         useUnifiedTopology: true,
         useNewUrlParser: true,

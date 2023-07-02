@@ -207,7 +207,8 @@ const Contact = () => {
             />
           </div>
         </div>
-
+      </div>
+      <div style={{ display: "grid", placeItems: "center" }}>
         <label
           style={{
             marginRight: "33rem",
@@ -218,7 +219,7 @@ const Contact = () => {
         <div
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
             width: "80%",
@@ -227,58 +228,67 @@ const Contact = () => {
         >
           {inputFields.map((input, index) => (
             <div key={index}>
-              <input
-                type="text"
-                name="fileName"
-                placeholder="File Name"
-                value={input.name}
-                style={{ width: "200px" }}
-                onChange={(event) => handleFormChange(index, event)}
-                required
-              />
-              <input
-                type="text"
-                name="typeofFile"
-                placeholder="Type of File"
-                value={input.age}
-                style={{ width: "200px", marginLeft: "10px" }}
-                onChange={(event) => handleFormChange(index, event)}
-                required
-              />
-              <label
-                htmlFor="file-upload"
-                className={styles.custom_file_upload}
-              >
-                <i className="fa fa-cloud-upload"></i>Upload Document
-              </label>
-              <input
-                id="file-upload"
-                type="file"
-                name="uploadDocumet"
-                placeholder="Dob"
-                value={input.dob}
-                onChange={(event) => handleFormChange(index, event)}
-                required
-              />
-              <i
-                onClick={addFields}
-                className="fa fa-plus-square"
-                style={{
-                  fontSize: "26px",
-                  marginLeft: "10px",
-                  cursor: "pointer",
-                }}
-              ></i>
-              {index ? (
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <input
+                  type="text"
+                  name="fileName"
+                  placeholder="File Name"
+                  value={input.name}
+                  style={{ width: "200px" }}
+                  onChange={(event) => handleFormChange(index, event)}
+                  required
+                />
+                <input
+                  type="text"
+                  name="typeofFile"
+                  placeholder="Type of File"
+                  value={input.age}
+                  style={{ width: "200px", marginLeft: "10px" }}
+                  onChange={(event) => handleFormChange(index, event)}
+                  required
+                />
+                <label
+                  htmlFor="file-upload"
+                  className={styles.custom_file_upload}
+                >
+                  <i className="fa fa-cloud-upload"></i>Upload Document
+                </label>
+                <input
+                  id="file-upload"
+                  type="file"
+                  name="uploadDocumet"
+                  placeholder="Dob"
+                  value={input.dob}
+                  onChange={(event) => handleFormChange(index, event)}
+                  required
+                />
                 <i
-                  onClick={() => removeFields(index)}
-                  className="fa fa-trash"
-                  style={{ fontSize: "36px", cursor: "pointer" }}
+                  onClick={addFields}
+                  className="fa fa-plus-square"
+                  style={{
+                    fontSize: "26px",
+                    marginLeft: "10px",
+                    cursor: "pointer",
+                    marginTop: "10px",
+                  }}
                 ></i>
-              ) : null}
+                {index ? (
+                  <i
+                    onClick={() => removeFields(index)}
+                    className="fa fa-trash"
+                    style={{
+                      fontSize: "36px",
+                      cursor: "pointer",
+                      marginLeft: "10px",
+                    }}
+                  ></i>
+                ) : null}
+              </div>
             </div>
           ))}
         </div>
+      </div>
+      <div style={{ display: "grid", placeItems: "center" }}>
         <button onClick={handleSubmit}>Submit</button>
       </div>
       {errMsg && <p style={{ color: "red" }}>{errMsg}</p>}
