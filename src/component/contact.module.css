@@ -1,0 +1,100 @@
+* {
+ margin:0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+input[type="text"], input[type="email"], input[type="date"]{
+    width: 280px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+sup {
+    color: red;
+}
+
+.inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+.outer {
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.mains {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.street_two {
+    margin-right: 4rem;
+   margin-top: 14px;
+}
+
+.dob {
+    margin-left: 2.5rem;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+.checkboxs {
+    margin-left: -28rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.checkboxs label {
+    margin-left: 8px;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom_file_upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+ button { 
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor:pointer;
+  margin-top: 1rem;
+ }
